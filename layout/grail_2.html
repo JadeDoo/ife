@@ -8,6 +8,9 @@
   <title>圣杯布局</title>
   <style>
     *{margin: 0;padding: 0;}
+    * html body {
+      overflow: hidden;
+    }
     body{
       min-width: 630px;
     }
@@ -24,11 +27,14 @@
     #container{
       padding-left: 200px; /* 左侧宽度 */
       padding-right: 190px; /* 右侧宽度 */
+      overflow: hidden;
     }
 
     #container .column{
       float: left;
       position: relative;
+      padding-bottom: 20010px; /*margin-bottom + padding-bottom*/
+      margin-bottom: -20000px;
     }
 
     #center {
@@ -54,10 +60,19 @@
 
     #footer {
       clear: both;
+      position: relative;
     }
 
     * html #left{
       left:150px;
+    }
+    * html #footer-wrapper{
+      float: left;
+      position: relative;
+      width: 100%;
+      padding-bottom: 10010px;
+      margin-bottom: -10000px;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -79,7 +94,9 @@
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla.</p>
     </div>
   </div>
-  <div id='footer'><h1>This is the footer.</h1></div>
+  <div id="footer-wrapper">
+    <div id='footer'><h1>This is the footer.</h1></div>
+  </div>
 </body>
 
 </html>
